@@ -10,6 +10,14 @@ import javax.persistence.Table;
 
 public class Student {
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Id
 	@Column (name = "id")
 	private int id;
@@ -21,7 +29,7 @@ public class Student {
 	@Column (name = "last_name")
 	private String  lastName;
 	
-	@Column (name = "emai")
+	@Column (name = "email")
 	private String  email;
 
 	public Student(String firstName, String lastName, String email) {
@@ -30,7 +38,10 @@ public class Student {
 		this.lastName = lastName;
 		this.email = email;
 	}
-
+	public Student()
+	{
+		
+	}
 	public String getFirstName() {
 		return firstName;
 	}
